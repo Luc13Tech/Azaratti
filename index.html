@@ -1,127 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AzaRatti - Plateforme</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(145deg, #0a0e1a 0%, #1a1f30 100%);
-            font-family: 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
-            padding: 2rem;
-        }
-
-        .card {
-            max-width: 1100px;
-            width: 100%;
-            padding: 4rem 3rem;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 215, 150, 0.15);
-            border-radius: 64px;
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 215, 150, 0.1);
-            text-align: center;
-            animation: apparition 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-            transform: translateY(30px);
-            opacity: 0;
-        }
-
-        @keyframes apparition {
-            0% { opacity: 0; transform: translateY(30px) scale(0.98); }
-            100% { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        .titre-principal {
-            font-size: clamp(2.8rem, 12vw, 6.2rem);
-            font-weight: 300;
-            letter-spacing: 0.06em;
-            color: #f2e8d5;
-            text-shadow: 0 0 30px rgba(255, 200, 130, 0.15);
-            margin-bottom: 0.2em;
-            line-height: 1.2;
-        }
-
-        .titre-principal strong {
-            font-weight: 600;
-            background: linear-gradient(135deg, #f6d5a3, #e8b87a);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 40px rgba(232, 184, 122, 0.25);
-        }
-
-        .sous-titre {
-            font-size: clamp(1.4rem, 5vw, 2.8rem);
-            font-weight: 200;
-            letter-spacing: 0.12em;
-            color: rgba(242, 232, 213, 0.7);
-            margin-top: 0.5rem;
-            border-top: 1px solid rgba(255, 215, 150, 0.12);
-            padding-top: 1.2rem;
-            display: inline-block;
-        }
-
-        .sous-titre span {
-            display: inline-block;
-            animation: scintillement 2.8s infinite alternate;
-            font-weight: 300;
-            color: #f2e8d5;
-        }
-
-        @keyframes scintillement {
-            0% { opacity: 0.6; text-shadow: 0 0 5px rgba(255, 215, 150, 0.1); }
-            100% { opacity: 1; text-shadow: 0 0 25px rgba(255, 215, 150, 0.3); }
-        }
-
-        .ornement {
-            margin-top: 2.5rem;
-            font-size: 0.9rem;
-            letter-spacing: 0.4em;
-            color: rgba(242, 232, 213, 0.2);
-            font-weight: 100;
-        }
-
-        .ornement::before {
-            content: "✦ ";
-            opacity: 0.5;
-        }
-
-        .ornement::after {
-            content: " ✦";
-            opacity: 0.5;
-        }
-
-        @media (max-width: 600px) {
-            .card {
-                padding: 2.5rem 1.5rem;
-                border-radius: 40px;
-            }
-            .sous-titre {
-                letter-spacing: 0.06em;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <h1 class="titre-principal">
-            Bienvenue sur<br><strong>AzaRatti</strong>
-        </h1>
-        <div class="sous-titre">
-            <span>La plateforme sera bientôt disponible</span>
-        </div>
-        <div class="ornement">Élégance &bull; Innovation &bull; Excellence</div>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <title>AzaRatti — Montres, Chaussures & Accessoires de Luxe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marcellus&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
