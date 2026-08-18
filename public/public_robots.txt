@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /azaratti-team-9k2x
