@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-anthracite text-ivory font-body;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Focus clavier visible, accessibilité */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #c8a465;
+  outline-offset: 2px;
+}
+
+/* Réduction des animations si l'utilisateur le préfère */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Cache la barre de scroll horizontale du bandeau catégories sans la désactiver */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
